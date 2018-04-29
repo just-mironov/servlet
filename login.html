@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+</head>
+<body>
+<#if error??>
+<span style="color: red;">${error}</span>
+</#if>
+<form method="post" action="login.html">
+    <table>
+        <tr>
+            <td>
+                Логин:
+            </td>
+            <td>
+                <input name="login" value="${login}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Пароль:
+            </td>
+            <td>
+                <input type="password" name="password">
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <input type="submit" value="Вход">
+            </td>
+        </tr>
+    </table>
+</form>
+<a href="register.html">Регистрация</a>
+</body>
+</html>

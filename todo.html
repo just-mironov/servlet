@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список задач</title>
+</head>
+<body>
+<form method="post" action="todo.html">
+    Новая задача: <input name="taskText">
+    <input type="submit" value="Добавить">
+    <a href="logout.html">Выход</a>
+</form>
+<ul>
+<#list items as item>
+    <li>
+        <form method="post" action="todo.html">
+            <input type="hidden" name="taskId" value="${item.id}">
+            ${item.text} <input type="submit" value="Удалить">
+        </form>
+    </li>
+</#list>
+</ul>
+<img src="cat.jpg">
+</body>
+</html>
